@@ -33,7 +33,10 @@ function mostrarItems() {
 // Función que encripta el texto del usuario:
 function encriptarTexto() {
     textoDesencriptado = obtenerTextoUsuario();
-    if (textoDesencriptado !== "") {
+    if (!validarTexto(textoDesencriptado)) {
+        alert('Debes sólo ingresar letras minúsculas y sin acentos');
+        mostrarItems();
+    } else if (textoDesencriptado !== "") {
         var textoEncriptado = textoDesencriptado
             .replace(/e/g, 'enter')
             .replace(/i/g, 'imes')
@@ -51,7 +54,10 @@ function encriptarTexto() {
 // Función para desencriptar el texto del usuario:
 function desencriptarTexto() {
     textoEncriptado = obtenerTextoUsuario();
-    if (textoEncriptado !== "") {
+    if (!validarTexto(textoEncriptado)) {
+        alert('Debes sólo ingresar letras minúsculas y sin acentos');
+        mostrarItems();
+    } else if (textoEncriptado !== "") {
         var textoDesencriptado = textoEncriptado
             .replace(/enter/g, 'e')
             .replace(/imes/g, 'i')
@@ -68,7 +74,13 @@ function desencriptarTexto() {
 
 // Función para copiar el texto que ha encriptado o desencriptado:
 function copiarTexto() {
-    let texto = textoOutput.innerHTML
+    let texto = textoOutput.innerHTML;
     navigator.clipboard.writeText(texto);
     alert('¡Texto copiado con éxito!');
+}
+
+// Función para comprobar si el texto ingresado cumple con las condiciones (solo minúsculas y sin acentos):
+function validarTexto(texto) {
+    let regla = /^[a-z\s]+$/;
+    return regla.test(texto);
 }
