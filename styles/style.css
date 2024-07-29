@@ -73,10 +73,18 @@ section {
     border: 1px #0A3871 solid;
 }
 
+.boton__encriptar:hover {
+    background-color: #295080;
+}
+
 .boton__desencriptar {
     background-color: #D8DFE8;
     color: #0A3871;
     border: 1px #0A3871 solid;
+}
+
+.boton__desencriptar:hover {
+    background-color: #C4CEDA;
 }
 
 .boton__encriptar, .boton__desencriptar {
@@ -125,6 +133,10 @@ section {
     color: #0A3871;
     font-size: 16px;
     cursor: pointer;
+}
+
+.boton__copiar:hover {
+    background-color: #D7DEE8;
 }
 
 footer {
