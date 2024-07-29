@@ -210,3 +210,35 @@ footer {
         margin-left: 32px;
     }
 }
+
+@media (max-width: 375px) {
+
+    header {
+        padding: 24px 0 0;
+    }
+
+    .seccion__izquierda {
+        margin-top: 80px;
+        margin-left: 15px;
+        width: 90%;
+    }
+
+    .izquierda__textousuario {
+        margin-top: 0;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .seccion__derecha {
+        width: 88%;
+        height: 25vh;
+        margin-top: 32px;
+        margin-left: 15px;
+    }
+
+    .boton__copiar {
+        margin: auto;
+    }
+}
