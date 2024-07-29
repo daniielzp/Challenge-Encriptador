@@ -152,3 +152,61 @@ footer {
         text-decoration: none;
     }
 }
+
+@media (max-width: 768px) {
+    
+    header {
+        padding: 73.42px 0 0 40px;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .seccion__izquierda {
+        margin-left: 80px;
+        width: 80%;
+    }
+
+    .izquierda__textousuario {
+        width: 100%;
+        text-align: left;
+    }
+
+    .botones {
+        margin-top: 30px;
+    }
+
+    .seccion__derecha {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 80%;
+        height: 15vh;
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+
+    .output__imagen {
+        display: none;
+    }
+
+    .output__tituloinfo {
+        padding-top: 45px;
+    }
+
+    .output__textoinfo {
+        padding-top: 32px;
+    }
+
+    .boton__copiar {
+        width: 90%;
+        height: 50px;
+        margin-left: 32px;
+    }
+}
