@@ -65,3 +65,10 @@ function desencriptarTexto() {
         mostrarItems();
     }
 }
+
+// Función para copiar el texto que ha encriptado o desencriptado:
+function copiarTexto() {
+    let texto = textoOutput.innerHTML
+    navigator.clipboard.writeText(texto);
+    alert('¡Texto copiado con éxito!');
+}
